@@ -142,6 +142,10 @@ video {
     color: #5b5b5b;
 }
 
+.logoImg {
+    filter: grayscale(1) brightness(0);
+}
+
 /* mobile design */
 section {
     padding-inline: 1.5rem !important;
@@ -314,7 +318,6 @@ section {
 
 .partners-logos img {
     mix-blend-mode: multiply;
-    filter: grayscale(1);
 }
 
 .imgCon {
@@ -333,4 +336,90 @@ footer {
 footer h2 {
     font-size: 2rem;
     font-weight: 800;
+}
+
+/* about section */
+.about-box {
+    border: 1px solid #bababa;
+}
+
+
+.bg-img-about {
+    height: 50vh;
+    width: 100vw;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.footer-hero-p {
+    line-height: 1.2rem;
+}
+
+
+/* logo section */
+.logo-section {
+    min-height: 55vh;
+    background-color: white;
+    border-bottom: 2px solid rgb(228, 228, 228);
+}
+
+.logo-section h2 {
+    font-size: 1.8rem;
+    line-height: 1.2rem;
+}
+
+.logo-section p {
+    line-height: 1.4rem;
+}
+
+.logo-box {
+    padding: 10%;
+    margin: 10% 5%;
+    border: 1px solid rgb(228, 228, 228);
+}
+
+/* after logo section */
+
+.portfolio-section {
+    min-height: 100vh;
+    background-color: white;
+    border-bottom: 2px solid rgb(228, 228, 228);
+}
+
+.portfolio-section h2 {
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+}
+
+.portfolio-section p {
+    line-height: 1.4rem;
+}
+
+.firstCard {
+    height: 250px;
+    width: 100%;
+    background: linear-gradient(#f5511dc1, #ff5b10bd), url(./imgs/website/WhatsApp\ Image\ 2023-05-19\ at\ 6.38.58\ PM.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.secondCard {
+    height: 250px;
+    width: 100%;
+    background: linear-gradient(#f5511dc1, #ff5b10bd), url(./imgs/website/WhatsApp\ Image\ 2023-05-19\ at\ 6.39.06\ PM.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.firstCard h2,
+h3,
+.secondCard h2,
+h3 {
+    font-weight: 700;
+    line-height: 1.4rem;
 }
