@@ -174,7 +174,7 @@ footer h2 {
 }
 
 .hero {
-  height: 75vh;
+  height: 85vh;
 }
 
 .hero-title h1 {
@@ -209,6 +209,7 @@ footer h2 {
   font-weight: 800;
   line-height: 2rem;
   font-size: 1.8rem;
+  color: #575757;
 }
 
 /* program design */
@@ -216,10 +217,7 @@ footer h2 {
 .program {
   min-height: 85vh;
   background:
-    linear-gradient(
-      rgb(39 42 49 / 60%),
-      rgb(39 42 49 / 60%)
-    ),
+    linear-gradient(rgb(57 59 65 / 60%), rgb(55 56 58 / 60%)),
     url(./imgs/website/5-dots.png);
 }
 
@@ -244,7 +242,7 @@ footer h2 {
 }
 
 .prog {
-  background-color: rgba(150, 150, 150, 0.15);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .prog img {
@@ -275,7 +273,7 @@ footer h2 {
 /* team members section */
 
 .team-members {
-  min-height: 80vh;
+  min-height: 90vh;
 }
 
 .member .backgtound-img {
@@ -315,7 +313,7 @@ footer h2 {
 /* partners */
 
 .partners {
-  background-color: var(--second-color);
+  background-color: #414245;
   min-height: 40vh;
 }
 
@@ -427,4 +425,171 @@ h3 {
 .third-hero h3 {
   line-height: 2rem;
   font-size: 1.3rem;
+}
+
+.cc {
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
+}
+
+/* desktop version */
+@media only screen and (min-width: 768px) {
+  .bg-img {
+    height: 90vh;
+    width: 100%;
+  }
+
+  .banner {
+    height: 6vh;
+    background-color: #414245;
+  }
+
+  .banner a {
+    text-decoration: none;
+    color: #d3d3d3;
+  }
+
+  .nav-item a {
+    white-space: nowrap;
+  }
+
+  .hero {
+    min-height: 90vh;
+  }
+
+  .hero-title h1 {
+    font-size: 4.2rem;
+    line-height: 1.2;
+    max-width: 60%;
+  }
+
+  .hero-title h2 {
+    font-size: 2.1rem;
+    line-height: 1;
+  }
+
+  .text-box {
+    max-width: 50%;
+  }
+
+  .hero-title p {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+  }
+
+  .third-hero h2 {
+    font-size: 2.6rem;
+    margin-top: 25px;
+    color: #575757;
+  }
+
+  .third-hero h3 {
+    font-weight: 500;
+  }
+
+  .program {
+    min-height: 80vh;
+  }
+
+  .prog {
+    width: 20%;
+  }
+
+  .prog img {
+    height: 50px;
+  }
+
+  .prog h5 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    text-align: center;
+  }
+
+  .prog p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .seeAll {
+    text-transform: uppercase;
+    color: #f7f7f7;
+    margin-top: 25px;
+  }
+
+  footer {
+    height: 22vh;
+  }
+
+  /* about  */
+  .logo-section h2 {
+    font-size: 1.8rem;
+    line-height: 2.25rem;
+  }
+
+  .logo-section p {
+    font-weight: 300;
+  }
+
+  .logo-box {
+    padding: 2.5%;
+    margin: 5% 25%;
+  }
+
+  .about-box {
+    max-width: 65%;
+  }
+
+  .about-box p {
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .logo-box .logoImg {
+    width: 75%;
+  }
+
+  .portfolio-section {
+    min-height: 80vh;
+  }
+
+  .firstCard {
+    height: 250px;
+    width: 50%;
+    filter: brightness(0.9);
+  }
+
+  .secondCard {
+    height: 250px;
+    width: 50%;
+    filter: brightness(0.9);
+  }
+
+  .footerAbout {
+    background-color: #414245;
+  }
+
+  .footerAbout p {
+    color: white;
+  }
+
+  /* Interactions */
+  .nav-item a:hover {
+    color: var(--main-color);
+  }
+
+  .nav-item .nav-link.active {
+    color: var(--main-color);
+  }
+
+  #firstCard:hover,
+  #secondCard:hover {
+    cursor: pointer;
+    filter: brightness(1) drop-shadow(4px 7px 0 var(--second-color));
+    transform: translateY(-10px);
+  }
+
+  .prog:hover {
+    border: 3px solid white;
+    cursor: pointer;
+  }
 }
