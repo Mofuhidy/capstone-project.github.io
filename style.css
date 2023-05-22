@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+    --main-color: #ec5242;
+    --second-color: #272a31;
+    --third: #d3d3d3;
+    --text: #585858;
+}
+
+* {
+    font-family: 'Lato', sans-serif;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background-color: #f7f7f7;
+}
+
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* color classes */
+.bg-main {
+    background-color: var(--main-color);
+}
+
+.bg-sec {
+    background-color: var(--second-color);
+}
+
+.bg-third {
+    background-color: var(--third);
+}
+
+.text-main {
+    color: var(--main-color);
+}
+
+.text-sec {
+    color: var(--second-color);
+}
+
+.text-third {
+    color: var(--third);
+}
+
+.text-p {
+    color: #5b5b5b;
+}
+
+/* mobile design */
+section {
+    padding-inline: 1.5rem !important;
+}
+
+.navbar-toggler {
+    border: none !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.bg-img {
+    height: 80vh;
+    width: 100vw;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.hero {
+    height: 75vh;
+}
+
+.hero-title h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background-image: linear-gradient(rgba(255, 98, 0, 0.897), rgba(255, 102, 0, 0.65)), url(./imgs/website/lucas-kapla-GAM-7l4QzmI-unsplash.jpg);
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-title h2 {
+    font-size: 1.4rem;
+}
+
+.text-box {
+    border: 4px solid white;
+    background-color: #f7f7f7;
+}
+
+.text-box p {
+    line-height: 1.2rem;
+}
+
+.third-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+}
+
+.third-hero h2 {
+    font-weight: 800;
+    line-height: 2rem;
+    font-size: 1.8rem;
+}
+
+.third-hero h3 {
+    line-height: 2rem;
+    font-size: 1.3rem;
+}
+
+/* program design */
+
+.program {
+    min-height: 85vh;
+    background: linear-gradient(rgb(39 42 49 / 60%),
+            rgb(39 42 49 / 60%)),
+        url(./imgs/website/5-dots.png)
+}
+
+.program h2,
+.team-members h2,
+.partners h2 {
+    line-height: 2rem;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.line {
+    height: 1px;
+    width: 50px;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    margin: 15px auto;
+}
+
+.prog {
+    background-color: rgba(150, 150, 150, 0.15)
+}
+
+.prog img {
+    height: 40px;
+}
+
+.prog h5 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.prog p {
+    color: rgb(255 255 255 / 98%);
+    font-weight: 300;
+    line-height: 1.1rem;
+    font-size: 0.8rem;
+}
+
+.program button {
+    outline: 0;
+    height: 60px;
+    width: 300px;
+    background: var(--main-color);
+    color: white;
+    border: none;
+}
+
+/* team members section */
+
+.team-members {
+    min-height: 80vh;
+}
+
+.member .backgtound-img {
+    height: 70px;
+    width: 70px;
+}
+
+.member .memberImg {
+    height: 120px;
+    width: 120px;
+    position: relative;
+    left: 17px;
+    top: -53px;
+}
+
+.member h2 {
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.member .title {
+    font-style: italic;
+}
+
+.member .desc {
+    line-height: 1.2rem;
+    font-size: 0.8rem;
+}
+
+
+.small-line {
+    height: 1px;
+    width: 25px;
+    color: var(--third);
+    border: 1px solid var(--third);
+}
+
+/* partners */
+
+.partners {
+    background-color: var(--second-color);
+    min-height: 40vh;
+}
+
+.partners-logos img {
+    mix-blend-mode: multiply;
+    filter: grayscale(1);
+}
+
+.imgCon {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Footer */
+
+footer {
+    height: 20vh;
+}
+
+footer h2 {
+    font-size: 2rem;
+    font-weight: 800;
+}
