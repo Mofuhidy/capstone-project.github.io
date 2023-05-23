@@ -184,8 +184,7 @@ footer h2 {
 .hero-title h1 {
   font-size: 2.5rem;
   font-weight: 800;
-  background-image:
-    linear-gradient(rgb(255 98 0 / 78%), rgb(255 102 0 / 66%)),
+  background-image: linear-gradient(rgb(255 98 0 / 78%), rgb(255 102 0 / 66%)),
     url(./imgs/website/titleBg.jpg);
   background-repeat: repeat;
   -webkit-background-clip: text;
@@ -222,8 +221,7 @@ footer h2 {
 
 .program {
   min-height: 85vh;
-  background:
-    linear-gradient(rgb(57 59 65 / 60%), rgb(55 56 58 / 60%)),
+  background: linear-gradient(rgb(57 59 65 / 60%), rgb(55 56 58 / 60%)),
     url(./imgs/website/5-dots.png);
 }
 
@@ -415,8 +413,7 @@ footer {
 .firstCard {
   height: 250px;
   width: 100%;
-  background:
-    linear-gradient(#f5511dc1, #ff5b10bd),
+  background: linear-gradient(#f5511dc1, #ff5b10bd),
     url(./imgs/website/WhatsApp\ Image\ 2023-05-19\ at\ 6.38.58\ PM.jpeg);
   background-size: cover;
   background-position: center;
@@ -426,8 +423,7 @@ footer {
 .secondCard {
   height: 250px;
   width: 100%;
-  background:
-    linear-gradient(#f5511dc1, #ff5b10bd),
+  background: linear-gradient(#f5511dc1, #ff5b10bd),
     url(./imgs/website/WhatsApp\ Image\ 2023-05-19\ at\ 6.39.06\ PM.jpeg);
   background-size: cover;
   background-position: center;
@@ -468,7 +464,7 @@ h3 {
   top: 0;
   background-image: url(./imgs/website/landingImg.png);
   background-color: rgba(255, 255, 255, 0.9);
-  overflow-x: hidden;
+  overflow: hidden;
   transition: 0.5s;
 }
 
