@@ -112,6 +112,10 @@ video {
   vertical-align: baseline;
 }
 
+body.active {
+  overflow-y: hidden;
+}
+
 /* color classes */
 .bg-main {
   background-color: var(--main-color);
@@ -180,7 +184,8 @@ footer h2 {
 .hero-title h1 {
   font-size: 2.5rem;
   font-weight: 800;
-  background-image: linear-gradient(rgb(255 98 0 / 78%), rgb(255 102 0 / 66%)),
+  background-image:
+    linear-gradient(rgb(255 98 0 / 78%), rgb(255 102 0 / 66%)),
     url(./imgs/website/titleBg.jpg);
   background-repeat: repeat;
   -webkit-background-clip: text;
@@ -217,7 +222,8 @@ footer h2 {
 
 .program {
   min-height: 85vh;
-  background: linear-gradient(rgb(57 59 65 / 60%), rgb(55 56 58 / 60%)),
+  background:
+    linear-gradient(rgb(57 59 65 / 60%), rgb(55 56 58 / 60%)),
     url(./imgs/website/5-dots.png);
 }
 
@@ -229,15 +235,13 @@ footer h2 {
   font-weight: 800;
 }
 
+.prog img {
+  height: 40px;
+}
+
 .partners div img {
   height: 50px;
   filter: brightness(0.8);
-}
-
-.imgCon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .partners div .mgcy-logo {
@@ -254,10 +258,6 @@ footer h2 {
 
 .prog {
   background-color: rgba(255, 255, 255, 0.2);
-}
-
-.prog img {
-  height: 40px;
 }
 
 .prog h5 {
@@ -350,6 +350,7 @@ footer {
   font-weight: 800;
   color: var(--main-color);
 }
+
 .about-box {
   border: 1px solid #bababa;
 }
@@ -410,7 +411,8 @@ footer {
 .firstCard {
   height: 250px;
   width: 100%;
-  background: linear-gradient(#f5511dc1, #ff5b10bd),
+  background:
+    linear-gradient(#f5511dc1, #ff5b10bd),
     url(./imgs/website/WhatsApp\ Image\ 2023-05-19\ at\ 6.38.58\ PM.jpeg);
   background-size: cover;
   background-position: center;
@@ -420,7 +422,8 @@ footer {
 .secondCard {
   height: 250px;
   width: 100%;
-  background: linear-gradient(#f5511dc1, #ff5b10bd),
+  background:
+    linear-gradient(#f5511dc1, #ff5b10bd),
     url(./imgs/website/WhatsApp\ Image\ 2023-05-19\ at\ 6.39.06\ PM.jpeg);
   background-size: cover;
   background-position: center;
@@ -451,11 +454,61 @@ h3 {
 
 /* mobile menu */
 
+/* The Overlay (background) */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-image: url(./imgs/website/landingImg.png);
+  background-color: rgba(255, 255, 255, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+/* Position the content inside the overlay */
+.navbar-nav {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+}
+
+/* The navigation links inside the overlay */
+.overlay li a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: var(--main-color);
+  display: block;
+  transition: 0.3s;
+  font-weight: 700;
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay li a:hover,
+.overlay li a:focus {
+  color: var(--second-color);
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  color: var(--text);
+  text-decoration: none;
+}
+
 /* desktop version */
 @media only screen and (min-width: 768px) {
   nav {
     background-color: white;
   }
+
   .bg-img {
     height: 90vh;
     width: 100%;

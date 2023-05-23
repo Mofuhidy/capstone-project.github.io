@@ -6,7 +6,8 @@ const teamsMember = [
     title: 'Founder - head of AYSDN',
     desc: 'Mr Tareq is the visionary behind the organization, responsible for its establishment and initial direction',
     alt: 'Tareq Hassan Image',
-  }, {
+  },
+  {
     id: 2,
     img: './imgs/speakers/speaker3.JPG',
     name: 'Musheer Abdo',
@@ -16,7 +17,8 @@ const teamsMember = [
                                 execution, and management of various projects
                                 and initiatives.`,
     alt: 'Musheer Abdo Image',
-  }, {
+  },
+  {
     id: 3,
     img: './imgs/speakers/speaker2.jpg',
     name: 'Ghada Omar',
@@ -26,7 +28,8 @@ const teamsMember = [
                                 budgeting, and accounting operations within the
                                 organization. Ghada ensures financial stability.`,
     alt: 'Ghada Omar',
-  }, {
+  },
+  {
     id: 4,
     img: 'https://sp-ao.shortpixel.ai/client/to_auto,q_lossy,ret_img,w_358,h_394/https://aysdn.org/wp-content/uploads/2023/03/h5-team2-aysdn12.jpg',
     name: 'Naseem Al-Zeinati',
@@ -35,7 +38,8 @@ const teamsMember = [
                                 the
                                 organization's web development activities.`,
     alt: 'Naseem Al-Zeinati Image',
-  }, {
+  },
+  {
     id: 5,
     img: './imgs/speakers/speaker4.jpeg',
     name: 'Reem Ali',
@@ -45,7 +49,8 @@ const teamsMember = [
                                 efficient functioning of the organization's
                                 administrative processes.`,
     alt: 'Reem Ali Image',
-  }, {
+  },
+  {
     id: 6,
     img: 'https://sp-ao.shortpixel.ai/client/to_auto,q_lossy,ret_img,w_358,h_394/https://aysdn.org/wp-content/uploads/2023/02/h6-team-02-1-aysdn.jpg',
     name: 'Ala Mustafa',
@@ -77,5 +82,38 @@ window.addEventListener('load', () => {
                         </div>
                     </div>
         `;
+  });
+});
+
+// mobile menu
+const hamburger = document.querySelector('.navbar-toggler-icon');
+const close = document.querySelector('.closebtn');
+const navbar = document.querySelector('#navbarSupportedContent');
+const body = document.querySelector('body');
+const mobileLinks = document.querySelectorAll('.nav-link');
+
+hamburger.addEventListener('click', () => {
+  document.querySelector('.cc').style.display = 'none';
+  navbar.classList.add('overlay');
+  navbar.classList.remove('d-none');
+  navbar.classList.add('w-100');
+  body.classList.toggle('active');
+});
+
+close.addEventListener('click', () => {
+  document.querySelector('.cc').style.display = 'block';
+  navbar.classList.remove('overlay');
+  navbar.classList.add('d-none');
+  navbar.classList.remove('w-100');
+});
+
+// links functionality
+mobileLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    document.querySelector('.cc').style.display = 'block';
+    navbar.classList.remove('overlay');
+    navbar.classList.add('d-none');
+    navbar.classList.remove('w-100');
+    body.classList.toggle('active');
   });
 });
