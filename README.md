@@ -35,8 +35,6 @@
 
 # 📖 [AYSDN] <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
-
 **[The Arab Youth Sustainable Development Network]** In this project I apply what I learned in the first module using HTML - CSS - basic JS building two pages home and about
 
 ## 🛠 Built With <a name="built-with"></a>
