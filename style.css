@@ -180,10 +180,7 @@ footer h2 {
 .hero-title h1 {
   font-size: 2.5rem;
   font-weight: 800;
-  background-image: linear-gradient(
-      rgba(255, 98, 0, 0.897),
-      rgba(255, 102, 0, 0.65)
-    ),
+  background-image: linear-gradient(rgb(255 98 0 / 78%), rgb(255 102 0 / 66%)),
     url(./imgs/website/titleBg.jpg);
   background-repeat: repeat;
   -webkit-background-clip: text;
@@ -232,8 +229,19 @@ footer h2 {
   font-weight: 800;
 }
 
-.partners .firstLogo {
-  height: 65px;
+.partners div img {
+  height: 50px;
+  filter: brightness(0.8);
+}
+
+.imgCon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.partners div .mgcy-logo {
+  height: 35px;
 }
 
 .line {
@@ -317,11 +325,7 @@ footer h2 {
 
 .partners {
   background-color: #414245;
-  min-height: 40vh;
-}
-
-.partners-logos img {
-  mix-blend-mode: multiply;
+  min-height: 50vh;
 }
 
 .imgCon {
@@ -338,6 +342,14 @@ footer {
 }
 
 /* about section */
+
+.about h1 {
+  background: none;
+  -webkit-text-fill-color: var(--main-color);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--main-color);
+}
 .about-box {
   border: 1px solid #bababa;
 }
@@ -601,5 +613,9 @@ h3 {
   .prog:hover {
     border: 3px solid white;
     cursor: pointer;
+  }
+
+  .partners div img {
+    height: 90px;
   }
 }
