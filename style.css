@@ -287,6 +287,10 @@ footer h2 {
   min-height: 90vh;
 }
 
+.member {
+  transition: all 2s linear 1s;
+}
+
 .member .backgtound-img {
   height: 70px;
   width: 70px;
@@ -501,6 +505,17 @@ h3 {
   font-size: 60px;
   color: var(--text);
   text-decoration: none;
+}
+
+.btn-outline {
+  border: 1px solid var(--third);
+  color: var(--second-color);
+  padding-block: 15px;
+}
+
+.iconArrow {
+  color: var(--main-color);
+  margin-left: 5px;
 }
 
 /* desktop version */

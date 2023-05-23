@@ -63,28 +63,6 @@ const teamsMember = [
   },
 ];
 
-const membersContainer = document.getElementById('membersContainer');
-window.addEventListener('load', () => {
-  teamsMember.forEach((member) => {
-    membersContainer.innerHTML += `
-          <div class="member d-flex col-md-6" id="member${member.id}">
-                        <div class="d-flex flex-column me-4">
-                            <img src="./imgs/website/istockphoto-806894546-612x612.jpg" alt="background"
-                                class="backgtound-img">
-                            <img src="${member.img}" alt="${member.alt} image" class="memberImg">
-                        </div>
-                        <div class="content ms-2">
-                            <h2 class="name"> ${member.name}</h2>
-                            <p class="title text-main py-1 small">${member.title}</p>
-                            <div class="small-line my-1"></div>
-                            <p class="desc py-1">${member.desc}
-                            </p>
-                        </div>
-                    </div>
-        `;
-  });
-});
-
 // mobile menu
 const hamburger = document.querySelector('.navbar-toggler-icon');
 const close = document.querySelector('.closebtn');
@@ -118,14 +96,100 @@ mobileLinks.forEach((link) => {
   });
 });
 
-// detect window width
-function detectScreen() {
+// generate team memebrs
+const membersContainer = document.getElementById('membersContainer');
+
+function generateTeam(num) {
+  for (let i = 0; i < num; i += 1) {
+    const member = teamsMember[i];
+    membersContainer.innerHTML += `
+          <div class="member d-flex col-md-6" id="member${member.id}">
+                        <div class="d-flex flex-column me-4">
+                            <img src="./imgs/website/istockphoto-806894546-612x612.jpg" alt="background"
+                                class="backgtound-img">
+                            <img src="${member.img}" alt="${member.alt} image" class="memberImg">
+                        </div>
+                        <div class="content ms-2">
+                            <h2 class="name"> ${member.name}</h2>
+                            <p class="title text-main py-1 small">${member.title}</p>
+                            <div class="small-line my-1"></div>
+                            <p class="desc py-1">${member.desc}
+                            </p>
+                        </div>
+                    </div>
+        `;
+  }
+
+  const btn = document.createElement('button');
+  const icon = document.createElement('i');
+  btn.classList.add('btn', 'btn-outline');
+  icon.classList.add('fa-solid', 'fa-angle-down', 'iconArrow');
+
+  if (num < teamsMember.length) {
+    btn.textContent = 'MORE';
+    btn.classList.remove('mb-5');
+  } else {
+    btn.textContent = 'LESS';
+    icon.style.rotate = '180deg';
+    btn.classList.add('mb-5');
+  }
+
+  btn.appendChild(icon);
+  membersContainer.appendChild(btn);
+}
+// for team memebers
+if (window.screen.width >= 768) {
+  document.addEventListener('DOMContentLoaded', generateTeam(teamsMember.length));
+  const more = document.querySelector('#membersContainer button');
+  more.classList.add('d-none');
+} else {
+  document.addEventListener('DOMContentLoaded', generateTeam(2));
+  const more = document.querySelector('#membersContainer button');
+  more.classList.remove('d-none');
+}
+
+//  function to add more team member on click
+let more = document.querySelector('#membersContainer button');
+const generateMem = () => {
+  const membersCont = document.querySelector('#membersContainer');
+  membersCont.innerHTML = '';
+  if (more.textContent === 'MORE') {
+    generateTeam(teamsMember.length);
+    more = document.querySelector('#membersContainer button');
+    more.addEventListener('click', generateMem);
+  } else {
+    generateTeam(2);
+    more.textContent = 'MORE';
+    more = document.querySelector('#membersContainer button');
+    more.addEventListener('click', generateMem);
+  }
+};
+
+more.addEventListener('click', generateMem);
+
+const members = document.querySelector('#membersContainer');
+let width = false;
+window.addEventListener('resize', () => {
+  if (window.innerWidth >= 768 && !width) {
+    width = true;
+    members.innerHTML = '';
+    generateTeam(teamsMember.length);
+    const more = document.querySelector('#membersContainer button');
+    more.addEventListener('click', generateMem);
+    more.classList.add('d-none');
+  } else if (window.innerWidth < 768 && width) {
+    width = false;
+    members.innerHTML = '';
+    generateTeam(2);
+    const more = document.querySelector('#membersContainer button');
+    more.addEventListener('click', generateMem);
+    more.classList.remove('d-none');
+  }
+  // delete the active mobile nav-bar
   if (window.screen.width >= 768) {
     document.querySelector('.cc').style.display = 'block';
     navbar.classList.remove('overlay');
     navbar.classList.add('d-none');
     navbar.classList.remove('w-100');
   }
-}
-
-window.addEventListener('resize', detectScreen);
+});
