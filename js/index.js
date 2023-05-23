@@ -117,3 +117,15 @@ mobileLinks.forEach((link) => {
     body.classList.toggle('active');
   });
 });
+
+// detect window width
+function detectScreen() {
+  if (window.screen.width >= 768) {
+    document.querySelector('.cc').style.display = 'block';
+    navbar.classList.remove('overlay');
+    navbar.classList.add('d-none');
+    navbar.classList.remove('w-100');
+  }
+}
+
+window.addEventListener('resize', detectScreen);
