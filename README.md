@@ -5,7 +5,7 @@
   <img src="./imgs/murple_logo.png" alt="logo" width="140"  height="auto" />
   <br/>
   <h3><b>First Capstone Project</b></h3>
-<img src="./imgs/Screenshot 2023-05-23 at 12.47.10.png" alt="logo" width="140"  height="auto" />
+<img src="./imgs/Screenshot 2023-05-23 at 12.47.10.png" alt="logo" width="500"  height="auto" />
 </div>
 
 <!-- TABLE OF CONTENTS -->
