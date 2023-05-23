@@ -1,0 +1,689 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+:root {
+  --main-color: #ec5242;
+  --second-color: #272a31;
+  --third: #d3d3d3;
+  --text: #585858;
+}
+
+* {
+  font-family: "Lato", sans-serif;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  background-color: #f7f7f7;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-size: inherit;
+  vertical-align: baseline;
+}
+
+body.active {
+  overflow-y: hidden;
+}
+
+/* color classes */
+.bg-main {
+  background-color: var(--main-color);
+}
+
+.bg-sec {
+  background-color: var(--second-color);
+}
+
+.bg-third {
+  background-color: var(--third);
+}
+
+.text-main {
+  color: var(--main-color);
+}
+
+.text-sec {
+  color: var(--second-color);
+}
+
+.text-third {
+  color: var(--third);
+}
+
+.text-p {
+  color: #5b5b5b;
+}
+
+.logoImg {
+  filter: grayscale(1) brightness(0);
+}
+
+/* mobile design */
+section {
+  padding-inline: 1.5rem !important;
+}
+
+footer h2 {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.navbar-toggler {
+  border: none !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.bg-img {
+  height: 80vh;
+  width: 100vw;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.hero {
+  height: 85vh;
+}
+
+.hero-title h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background-image:
+    linear-gradient(rgb(255 98 0 / 78%), rgb(255 102 0 / 66%)),
+    url(./imgs/website/titleBg.jpg);
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-title h2 {
+  font-size: 1.4rem;
+}
+
+.text-box {
+  border: 4px solid white;
+  background-color: #f7f7f7;
+}
+
+.text-box p {
+  line-height: 1.2rem;
+}
+
+.third-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.third-hero h2 {
+  font-weight: 800;
+  line-height: 2rem;
+  font-size: 1.8rem;
+  color: #575757;
+}
+
+/* program design */
+
+.program {
+  min-height: 85vh;
+  background:
+    linear-gradient(rgb(57 59 65 / 60%), rgb(55 56 58 / 60%)),
+    url(./imgs/website/5-dots.png);
+}
+
+.program h2,
+.team-members h2,
+.partners h2 {
+  line-height: 2rem;
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.prog img {
+  height: 40px;
+}
+
+.partners div img {
+  height: 50px;
+  filter: brightness(0.8);
+}
+
+.partners div .mgcy-logo {
+  height: 35px;
+}
+
+.line {
+  height: 1px;
+  width: 50px;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+  margin: 15px auto;
+}
+
+.prog {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.prog h5 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.prog p {
+  color: rgb(255 255 255 / 98%);
+  font-weight: 300;
+  line-height: 1.1rem;
+  font-size: 0.8rem;
+}
+
+.program button {
+  outline: 0;
+  height: 60px;
+  width: 300px;
+  background: var(--main-color);
+  color: white;
+  border: none;
+}
+
+/* team members section */
+
+.team-members {
+  min-height: 90vh;
+}
+
+.member {
+  transition: all 2s linear 1s;
+}
+
+.member .backgtound-img {
+  height: 70px;
+  width: 70px;
+}
+
+.member .memberImg {
+  height: 120px;
+  width: 120px;
+  position: relative;
+  left: 17px;
+  top: -53px;
+}
+
+.member h2 {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.member .title {
+  font-style: italic;
+}
+
+.member .desc {
+  line-height: 1.2rem;
+  font-size: 0.8rem;
+}
+
+.small-line {
+  height: 1px;
+  width: 25px;
+  color: var(--third);
+  border: 1px solid var(--third);
+}
+
+/* partners */
+
+.partners {
+  background-color: #414245;
+  min-height: 45vh;
+}
+
+.imgCon {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Footer */
+
+footer {
+  height: 22vh;
+}
+
+/* about section */
+
+.about h1 {
+  background: none;
+  -webkit-text-fill-color: var(--main-color);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--main-color);
+}
+
+.about-box {
+  border: 1px solid #bababa;
+}
+
+.bg-img-about {
+  height: 50vh;
+  width: 100vw;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.footer-hero-p {
+  line-height: 1.2rem;
+}
+
+/* logo section */
+.logo-section {
+  min-height: 55vh;
+  background-color: white;
+  border-bottom: 2px solid rgb(228, 228, 228);
+}
+
+.logo-section h2 {
+  font-size: 1.8rem;
+  line-height: 1.2rem;
+}
+
+.logo-section p {
+  line-height: 1.4rem;
+}
+
+.logo-box {
+  padding: 10%;
+  margin: 10% 5%;
+  border: 1px solid rgb(228, 228, 228);
+}
+
+/* after logo section */
+
+.portfolio-section {
+  min-height: 100vh;
+  background-color: white;
+  border-bottom: 2px solid rgb(228, 228, 228);
+}
+
+.portfolio-section h2 {
+  font-size: 1.8rem;
+  line-height: 2.3rem;
+}
+
+.portfolio-section p {
+  line-height: 1.4rem;
+}
+
+.firstCard {
+  height: 250px;
+  width: 100%;
+  background:
+    linear-gradient(#f5511dc1, #ff5b10bd),
+    url(./imgs/website/WhatsApp\ Image\ 2023-05-19\ at\ 6.38.58\ PM.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.secondCard {
+  height: 250px;
+  width: 100%;
+  background:
+    linear-gradient(#f5511dc1, #ff5b10bd),
+    url(./imgs/website/WhatsApp\ Image\ 2023-05-19\ at\ 6.39.06\ PM.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#firstCard h2,
+h3 {
+  font-weight: 700;
+  line-height: 1.4rem;
+}
+
+#secondCard h2,
+h3 {
+  font-weight: 700;
+  line-height: 1.4rem;
+}
+
+.third-hero h3 {
+  line-height: 2rem;
+  font-size: 1.3rem;
+}
+
+.cc {
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
+}
+
+/* mobile menu */
+
+/* The Overlay (background) */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-image: url(./imgs/website/landingImg.png);
+  background-color: rgba(255, 255, 255, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+/* Position the content inside the overlay */
+.navbar-nav {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+}
+
+/* The navigation links inside the overlay */
+.overlay li a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: var(--main-color);
+  display: block;
+  transition: 0.3s;
+  font-weight: 700;
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay li a:hover,
+.overlay li a:focus {
+  color: var(--second-color);
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.btn-outline {
+  border: 1px solid var(--third);
+  color: var(--second-color);
+  padding-block: 15px;
+}
+
+.iconArrow {
+  color: var(--main-color);
+  margin-left: 5px;
+}
+
+/* desktop version */
+@media only screen and (min-width: 768px) {
+  nav {
+    background-color: white;
+  }
+
+  .bg-img {
+    height: 90vh;
+    width: 100%;
+  }
+
+  .banner {
+    height: 6vh;
+    background-color: #414245;
+  }
+
+  .banner a {
+    text-decoration: none;
+    color: #d3d3d3;
+  }
+
+  .nav-item a {
+    white-space: nowrap;
+  }
+
+  .hero {
+    min-height: 90vh;
+  }
+
+  .hero-title h1 {
+    font-size: 4.2rem;
+    line-height: 1.2;
+    max-width: 60%;
+  }
+
+  .hero-title h2 {
+    font-size: 2.1rem;
+    line-height: 1;
+  }
+
+  .text-box {
+    max-width: 50%;
+  }
+
+  .hero-title p {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+  }
+
+  .third-hero h2 {
+    font-size: 2.6rem;
+    margin-top: 25px;
+    color: #575757;
+  }
+
+  .third-hero h3 {
+    font-weight: 500;
+  }
+
+  .program {
+    min-height: 80vh;
+  }
+
+  .prog {
+    width: 20%;
+  }
+
+  .prog img {
+    height: 50px;
+  }
+
+  .prog h5 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    text-align: center;
+  }
+
+  .prog p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .seeAll {
+    text-transform: uppercase;
+    color: #f7f7f7;
+    margin-top: 25px;
+  }
+
+  footer {
+    height: 22vh;
+  }
+
+  /* about  */
+  .logo-section h2 {
+    font-size: 1.8rem;
+    line-height: 2.25rem;
+  }
+
+  .logo-section p {
+    font-weight: 300;
+  }
+
+  .logo-box {
+    padding: 2.5%;
+    margin: 5% 25%;
+  }
+
+  .about-box {
+    max-width: 65%;
+  }
+
+  .about-box p {
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .logo-box .logoImg {
+    width: 75%;
+  }
+
+  .portfolio-section {
+    min-height: 80vh;
+  }
+
+  .firstCard {
+    height: 250px;
+    width: 50%;
+    filter: brightness(0.9);
+  }
+
+  .secondCard {
+    height: 250px;
+    width: 50%;
+    filter: brightness(0.9);
+  }
+
+  .footerAbout {
+    background-color: #414245;
+  }
+
+  .footerAbout p {
+    color: white;
+  }
+
+  /* Interactions */
+  .nav-item a:hover {
+    color: var(--main-color);
+  }
+
+  .nav-item .nav-link.active {
+    color: var(--main-color);
+  }
+
+  #firstCard:hover,
+  #secondCard:hover {
+    cursor: pointer;
+    filter: brightness(1) drop-shadow(4px 7px 0 var(--second-color));
+    transform: translateY(-10px);
+  }
+
+  .prog:hover {
+    border: 3px solid white;
+    cursor: pointer;
+  }
+
+  .partners div img {
+    height: 90px;
+  }
+}
