@@ -83,6 +83,7 @@ close.addEventListener('click', () => {
   navbar.classList.remove('overlay');
   navbar.classList.add('d-none');
   navbar.classList.remove('w-100');
+  body.classList.toggle('active');
 });
 
 // links functionality
